@@ -32,6 +32,7 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
+        Job testFullJobObject = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertTrue((testFullJobObject.getName() instanceof  String));
         assertTrue(testFullJobObject.getEmployer() instanceof Employer);
         assertTrue(testFullJobObject.getLocation() instanceof Location);
