@@ -16,10 +16,14 @@ public class JobTest {
     Job testFullJobObjectEmptyField = new Job("", new Employer(), new Location(), new PositionType(), new CoreCompetency());
 
     @Test
-    public void testSettingId(){
+    public void testSettingJobId(){
         assertFalse(testJob.getId() == testJob2.getId());
     }
 
+    @Test
+    public void testSettingId(){
+        assertFalse(testJob.getId() == testJob2.getId());
+    }
 
     @Test
     public void testJobConstructorSetsAllFields() {
