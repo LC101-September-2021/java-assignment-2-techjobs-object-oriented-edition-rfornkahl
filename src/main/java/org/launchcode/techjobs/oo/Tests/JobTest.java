@@ -9,31 +9,50 @@ import static org.junit.Assert.assertEquals;
 
 public class JobTest {
 
-
+    Job testJob = new Job();
+    Job testJob2 = new Job();
+    Job testFullJobObject = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+    Job testFullJobObjectDup = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+    Job testFullJobObjectEmptyField = new Job("", new Employer(), new Location(), new PositionType(), new CoreCompetency());
 
     @Test
     public void testSettingJobId(){
-        Job testJob = new Job();
-        Job testJob2 = new Job();
-
         assertFalse(testJob.getId() == testJob2.getId());
     }
 
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        Job testJob3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertTrue((testJob3.getName() instanceof  String));
-       assertTrue(testJob3.getEmployer() instanceof Employer);
-        assertTrue(testJob3.getLocation() instanceof Location);
-        assertTrue(testJob3.getPositionType() instanceof PositionType);
-      assertTrue(testJob3.getCoreCompetency() instanceof CoreCompetency);
+        assertTrue((testFullJobObject.getName() instanceof  String));
+       assertTrue(testFullJobObject.getEmployer() instanceof Employer);
+        assertTrue(testFullJobObject.getLocation() instanceof Location);
+        assertTrue(testFullJobObject.getPositionType() instanceof PositionType);
+      assertTrue(testFullJobObject.getCoreCompetency() instanceof CoreCompetency);
     }
 
     @Test
     public void testJobsForEquality(){
-        Job testJob4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        Job testJob5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertFalse(testJob4 == testJob5 );
+       assertFalse(testFullJobObject == testFullJobObjectDup );
     }
-}
+
+    @Test
+    public void toStringBlankLineBeforeAndAfterJobInformation(){
+       assertEquals('\n',testFullJobObject.toString().charAt(0));
+        assertEquals('\n',testFullJobObject.toString().charAt(testFullJobObject.toString().length()-1));
+    }
+
+    @Test
+    public void toStringEachFieldOnItsOwnLineWithColonSpaceThenItem(){
+      assertEquals("\nID: " + testFullJobObject.getId() + "\nName: " + testFullJobObject.getName()
+              + "\nEmployer: " + testFullJobObject.getEmployer() + "\nLocation: " + testFullJobObject.getLocation()
+              + "\nPosition Type: " + testFullJobObject.getPositionType() + "\nCore Competency: " + testFullJobObject.getCoreCompetency() + "\n", testFullJobObject.toString());
+      }
+
+      @Test
+    public void fieldIsEmptyDataNotAvailable(){
+          assertEquals("\nID: " + testFullJobObjectEmptyField.getId() + "\nName: Data not available"
+                  + "\nEmployer: Data not available" + "\nLocation: Data not available"
+                  + "\nPosition Type: Data not available" + "\nCore Competency: Data not available" + "\n", testFullJobObjectEmptyField.toString());
+      }
+      }
+
