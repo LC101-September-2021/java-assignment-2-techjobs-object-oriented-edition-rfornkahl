@@ -16,7 +16,7 @@ public class JobTest {
     Job testFullJobObjectEmptyField = new Job("", new Employer(), new Location(), new PositionType(), new CoreCompetency());
 
     @Test
-    public void testSettingJobId(){
+    public void testSettingId(){
         assertFalse(testJob.getId() == testJob2.getId());
     }
 
