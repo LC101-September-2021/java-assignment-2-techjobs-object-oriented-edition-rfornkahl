@@ -45,20 +45,20 @@ public class JobTest {
     }
 
     @Test
-    public void toStringBlankLineBeforeAndAfterJobInformation(){
+    public void testTestToStringStartsAndEndsWithNewLineCallsAssertions(){
         assertEquals('\n',testFullJobObject.toString().charAt(0));
         assertEquals('\n',testFullJobObject.toString().charAt(testFullJobObject.toString().length()-1));
     }
 
     @Test
-    public void toStringEachFieldOnItsOwnLineWithColonSpaceThenItem(){
+    public void testTestToStringContainsCorrectLabelsAndDataCallsToString (){
         assertEquals("\nID: " + testFullJobObject.getId() + "\nName: " + testFullJobObject.getName()
                 + "\nEmployer: " + testFullJobObject.getEmployer() + "\nLocation: " + testFullJobObject.getLocation()
                 + "\nPosition Type: " + testFullJobObject.getPositionType() + "\nCore Competency: " + testFullJobObject.getCoreCompetency() + "\n", testFullJobObject.toString());
     }
 
     @Test
-    public void fieldIsEmptyDataNotAvailable(){
+    public void testToStringHandlesEmptyField(){
         assertEquals("\nID: " + testFullJobObjectEmptyField.getId() + "\nName: Data not available"
                 + "\nEmployer: Data not available" + "\nLocation: Data not available"
                 + "\nPosition Type: Data not available" + "\nCore Competency: Data not available" + "\n", testFullJobObjectEmptyField.toString());
