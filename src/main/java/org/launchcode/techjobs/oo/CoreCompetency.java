@@ -2,11 +2,12 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class CoreCompetency {
+public class CoreCompetency extends JobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
+    //Code now contained in JobField
+    // private int id;
+    //private static int nextId = 1;
+    //private String value;
 
     public CoreCompetency() {
         this.id = nextId;
@@ -20,14 +21,15 @@ public class CoreCompetency {
 
     // Custom toString, equals, and hashCode methods:
 
-    @Override
-    public String toString() {
-        if (value == null) {
-            return "Data not available";
-        } else {
-            return value;
-        }
-    }
+    //code for toString now in the JobField class
+    //@Override
+    //public String toString() {
+    //    if (value == null || value == "") {
+    //        return "Data not available";
+    //    } else {
+    //        return value;
+    //    }
+    //}
 
     @Override
     public boolean equals(Object o) {

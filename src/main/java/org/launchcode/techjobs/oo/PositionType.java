@@ -2,11 +2,12 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class PositionType {
+public class PositionType extends JobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
+    //Code now contained in JobField
+    // private int id;
+    //private static int nextId = 1;
+    //private String value;
 
     public PositionType() {
         id = nextId;
@@ -20,14 +21,15 @@ public class PositionType {
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
 
-    @Override
-    public String toString() {
-        if (value == null) {
-            return "Data not available";
-        } else {
-            return value;
-        }
-    }
+    //code for toString now in the JobField class
+    //@Override
+    //public String toString() {
+    //    if (value == null || value == "") {
+    //        return "Data not available";
+    //    } else {
+    //        return value;
+    //    }
+    //}
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
