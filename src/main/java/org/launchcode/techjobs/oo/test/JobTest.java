@@ -45,13 +45,13 @@ public class JobTest {
     }
 
     @Test
-    public void testTestToStringStartsAndEndsWithNewLineCallsAssertions(){
+    public void testToStringStartsAndEndsWithNewLine(){
         assertEquals('\n',testFullJobObject.toString().charAt(0));
         assertEquals('\n',testFullJobObject.toString().charAt(testFullJobObject.toString().length()-1));
     }
 
     @Test
-    public void testTestToStringContainsCorrectLabelsAndDataCallsToString (){
+    public void testToStringContainsCorrectLabelsAndData (){
         assertEquals("\nID: " + testFullJobObject.getId() + "\nName: " + testFullJobObject.getName()
                 + "\nEmployer: " + testFullJobObject.getEmployer() + "\nLocation: " + testFullJobObject.getLocation()
                 + "\nPosition Type: " + testFullJobObject.getPositionType() + "\nCore Competency: " + testFullJobObject.getCoreCompetency() + "\n", testFullJobObject.toString());
