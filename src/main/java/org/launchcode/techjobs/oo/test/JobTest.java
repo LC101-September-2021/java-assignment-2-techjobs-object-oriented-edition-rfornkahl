@@ -24,6 +24,7 @@ public class JobTest {
     @Test
     public void testSettingJobId(){
         assertFalse(testJob.getId() == testJob2.getId());
+        assertFalse(testJob.getId() == testJob2.getId());
     }
 
     @Test
@@ -50,7 +51,8 @@ public class JobTest {
 
     @Test
     public void testJobsForEquality(){
-        assertFalse(testFullJobObject == testFullJobObjectDup );
+
+        Assert.assertFalse(testFullJobObject == testFullJobObjectDup );
     }
 
     @Test
