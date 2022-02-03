@@ -4,10 +4,6 @@ import java.util.Objects;
 
 public class Employer extends JobField {
 
-    //Code now contained in JobField
-   // private int id;
-    //private static int nextId = 1;
-    //private String value;
 
     public Employer() {
         id = nextId;
@@ -19,17 +15,6 @@ public class Employer extends JobField {
         this.value = value;
     }
 
-    // Custom toString, equals, and hashCode methods:
-
-    //code for toString now in the JobField class
-    //@Override
-    //public String toString() {
-    //    if (value == null || value == "") {
-    //        return "Data not available";
-    //    } else {
-    //        return value;
-    //    }
-    //}
 
     @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
@@ -50,12 +35,6 @@ public class Employer extends JobField {
         return id;
     }
 
-    public String getValue() {
-        return value;
-    }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
 
 }

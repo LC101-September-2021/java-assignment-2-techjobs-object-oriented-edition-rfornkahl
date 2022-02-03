@@ -6,6 +6,7 @@ public abstract class JobField {
     public static int nextId = 1;
     public String value;
 
+
     @Override
     public String toString() {
         if (value == null || value == "") {
@@ -14,6 +15,12 @@ public abstract class JobField {
             return value;
         }
     }
+    public String getValue() {
+        return value;
+    }
 
+    public void setValue(String value) {
+        this.value = value;
+    }
 
 }

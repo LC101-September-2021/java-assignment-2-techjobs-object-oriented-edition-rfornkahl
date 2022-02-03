@@ -4,10 +4,6 @@ import java.util.Objects;
 
 public class CoreCompetency extends JobField {
 
-    //Code now contained in JobField
-    // private int id;
-    //private static int nextId = 1;
-    //private String value;
 
     public CoreCompetency() {
         this.id = nextId;
@@ -19,17 +15,6 @@ public class CoreCompetency extends JobField {
         this.value = value;
     }
 
-    // Custom toString, equals, and hashCode methods:
-
-    //code for toString now in the JobField class
-    //@Override
-    //public String toString() {
-    //    if (value == null || value == "") {
-    //        return "Data not available";
-    //    } else {
-    //        return value;
-    //    }
-    //}
 
     @Override
     public boolean equals(Object o) {
@@ -51,11 +36,5 @@ public class CoreCompetency extends JobField {
         return value;
     }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
 
-    public int getId() {
-        return id;
-    }
 }

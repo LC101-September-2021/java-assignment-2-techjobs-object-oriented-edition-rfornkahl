@@ -19,17 +19,6 @@ public class PositionType extends JobField {
         this.value = value;
     }
 
-    // TODO: Add a custom toString() method that returns the data stored in 'value'.
-
-    //code for toString now in the JobField class
-    //@Override
-    //public String toString() {
-    //    if (value == null || value == "") {
-    //        return "Data not available";
-    //    } else {
-    //        return value;
-    //    }
-    //}
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
@@ -53,12 +42,6 @@ public class PositionType extends JobField {
         return id;
     }
 
-    public String getValue() {
-        return value;
-    }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
 
 }
