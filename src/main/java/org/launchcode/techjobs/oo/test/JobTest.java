@@ -47,7 +47,7 @@ public class JobTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
-        assertEquals('\n',testFullJobObject.toString().charAt(0));
+        assertEquals('\n', testFullJobObject.toString().charAt(0));
         assertEquals('\n',testFullJobObject.toString().charAt(testFullJobObject.toString().length()-1));
     }
 
