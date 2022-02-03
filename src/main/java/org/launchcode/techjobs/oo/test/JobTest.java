@@ -23,6 +23,8 @@ public class JobTest {
 
     @Test
     public void testSettingJobId(){
+        Job testJob = new Job();
+        Job testJob2 = new Job();
         Assert.assertFalse(testJob.getId() == testJob2.getId());
         Assert.assertFalse(testJob.getId() == testJob2.getId());
     }
