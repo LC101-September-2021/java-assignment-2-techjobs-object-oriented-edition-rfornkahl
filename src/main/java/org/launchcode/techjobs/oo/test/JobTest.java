@@ -40,6 +40,10 @@ public class JobTest {
         Assert.assertTrue(testFullJobObject.getPositionType() instanceof PositionType);
         Assert.assertTrue(testFullJobObject.getCoreCompetency() instanceof CoreCompetency);
          Assert.assertEquals(testFullJobObject.getName(), "Product tester");
+         Assert.assertEquals("ACME", testFullJobObject.getEmployer().value);
+        Assert.assertEquals("Desert", testFullJobObject.getLocation().value);
+        Assert.assertEquals("Quality control", testFullJobObject.getPositionType().value);
+        Assert.assertEquals("Persistence", testFullJobObject.getCoreCompetency().value);
 
 
     }
