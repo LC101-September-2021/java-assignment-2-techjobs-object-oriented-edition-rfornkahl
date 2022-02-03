@@ -23,14 +23,10 @@ public class JobTest {
 
     @Test
     public void testSettingJobId(){
-        assertFalse(testJob.getId() == testJob2.getId());
-        assertFalse(testJob.getId() == testJob2.getId());
+        Assert.assertFalse(testJob.getId() == testJob2.getId());
+        Assert.assertFalse(testJob.getId() == testJob2.getId());
     }
 
-    @Test
-    public void testSettingId(){
-        assertFalse(testJob.getId() == testJob2.getId());
-    }
 
     @Test
     public void testJobConstructorSetsAllFields() {
