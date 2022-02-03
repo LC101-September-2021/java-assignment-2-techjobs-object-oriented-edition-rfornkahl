@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 /**
  * Created by LaunchCode
  */
-public class TestTaskFour extends AbstractTest {
+public class  TestTaskFour extends AbstractTest {
 
     @Tested
     JobTest jobTest;
