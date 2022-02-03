@@ -39,6 +39,9 @@ public class JobTest {
         Assert.assertTrue(testFullJobObject.getLocation() instanceof Location);
         Assert.assertTrue(testFullJobObject.getPositionType() instanceof PositionType);
         Assert.assertTrue(testFullJobObject.getCoreCompetency() instanceof CoreCompetency);
+         Assert.assertEquals(testFullJobObject.getName(), "Product tester");
+
+
     }
 
     @Test
